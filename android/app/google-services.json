@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "416945333384",
+    "project_id": "tuyensinhudn-1b6c9",
+    "storage_bucket": "tuyensinhudn-1b6c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416945333384:android:b44de707266cbc47d02b3d",
+        "android_client_info": {
+          "package_name": "com.example.danangud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416945333384-ht6quknodrjrorjl8bdqlf5e66algom1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATOrWRK2IXNH5ZsEhwF0DXyBnp8y_8n9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416945333384-ht6quknodrjrorjl8bdqlf5e66algom1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
