@@ -1,6 +1,9 @@
-import 'package:danangud/inputs.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:danangud/service/auth.dart';
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 class registerPage extends StatefulWidget {
 
@@ -12,6 +15,8 @@ class registerPage extends StatefulWidget {
 }
 
 class _registerPageState extends State<registerPage>{
+  
+  final AuthService _auth = AuthService();
 
   final _name = TextEditingController();
   final _dayofbirth = TextEditingController();
@@ -350,9 +355,28 @@ class _registerPageState extends State<registerPage>{
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal:40 ),
                   child: InkWell(
-                    onTap: () {
+                    onTap: () async{
                       if(_formKey.currentState.validate()){
-
+                        try {
+                          await Firebase.initializeApp();
+                          UserCredential user =
+                          await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);
+                          User updateUser = FirebaseAuth.instance.currentUser;
+                          updateUser.updateProfile(displayName: name);
+                          _auth.signUpUser(name, dayofbirth, phone, namelogin, password, email);
+                        } on FirebaseAuthException catch (e) {
+                          if (e.code == 'weak-password') {
+                            print('The password provided is too weak.');
+                          } else if (e.code == 'email-already-in-use') {
+                            print('The account already exists for that email.');
+                          }
+                        } catch (e) {
+                          print(e.toString());
+                        }
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>loginPage()),
+                        );
                       };
                     },
                     child: Container(
