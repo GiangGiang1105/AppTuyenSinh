@@ -27,13 +27,13 @@ class _homeRegisterPageState extends State<homeRegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          onPressed: null,
-        ),
-        title: Text('ĐĂNG KÝ XÉT TUYỂN'),
-      ),
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //     icon: Icon(Icons.arrow_back_ios),
+      //     onPressed: null,
+      //   ),
+      //   title: Text('ĐĂNG KÝ XÉT TUYỂN'),
+      // ),
       // body is the majority of the screen.
       body: SingleChildScrollView(
         child: Form(
@@ -47,7 +47,9 @@ class _homeRegisterPageState extends State<homeRegisterPage> {
                         Container(
                           alignment: Alignment.center,
                           child: Image.asset('assets/images/tuyensinh.jpg'),
-                          margin: EdgeInsets.only(left:0.0, top:0.0, bottom: 70.0,right: 0.0),
+                          width: 390.0,
+                          margin: EdgeInsets.only(
+                              left: 0.0, top: 0.0, bottom: 70.0, right: 0.0),
                         )
                       ],
                     )
@@ -63,7 +65,8 @@ class _homeRegisterPageState extends State<homeRegisterPage> {
                   onTap: () async {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => xetTuyenThangPage()),
+                      MaterialPageRoute(
+                          builder: (context) => xetTuyenThangPage()),
                     );
                   },
                   child: Container(

@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
     FirebaseAuth.instance.authStateChanges().listen((User user) {
       if (user != null) {
         home = homeRegisterPage();
-      }
-      else {
+      } else {
         home = loginPage();
       }
     });

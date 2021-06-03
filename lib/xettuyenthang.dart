@@ -54,11 +54,11 @@ class _xetTuyenThangPageState extends State<xetTuyenThangPage> {
 
   GioiTinh _gioitinh = GioiTinh.Nam;
   GiaiThuong _giaithuong = null;
-  Cuocthi _cuocthi =null;
+  Cuocthi _cuocthi = null;
 
   List<String> _dropdownItemsTinh = [
     "Tỉnh Thành",
-        "Đà Nẵng",
+    "Đà Nẵng",
     "TP. Hồ Chí Minh",
     "Huế",
     "Cà Mau",
@@ -529,9 +529,14 @@ class _xetTuyenThangPageState extends State<xetTuyenThangPage> {
                             ),
                           ]),
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 4, left: 10),
+                        padding: const EdgeInsets.only(
+                          top: 4,
+                          left: 10,
+                        ),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                              isDense: false,
+                              isExpanded: true,
                               value: _tinh,
                               items: _dropdownMenuItemsTinh,
                               onChanged: (value) {
@@ -562,6 +567,8 @@ class _xetTuyenThangPageState extends State<xetTuyenThangPage> {
                         padding: const EdgeInsets.only(top: 4, left: 10),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                              isDense: false,
+                              isExpanded: true,
                               value: _truong,
                               items: _dropdownMenuItemsTruong,
                               onChanged: (value) {
@@ -803,6 +810,8 @@ class _xetTuyenThangPageState extends State<xetTuyenThangPage> {
                     padding: const EdgeInsets.only(top: 4, left: 20, right: 20),
                     child: DropdownButtonHideUnderline(
                       child: DropdownButton(
+                          isDense: false,
+                          isExpanded: true,
                           value: _nganh,
                           items: _dropdownMenuItemsNganh,
                           onChanged: (value) {
