@@ -1,7 +1,9 @@
+import 'package:danangud/HomeRegister.dart';
 import 'package:danangud/register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:danangud/service/auth.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class loginPage extends StatefulWidget {
   final Function toggleView;
@@ -199,11 +201,28 @@ class _loginPageState extends State<loginPage> {
                             .listen((User user) {
                           if (user == null) {
                             print('User is currently signed out!');
+                            Fluttertoast.showToast(
+                                msg: "Đăng nhập không thành công!",
+                                toastLength: Toast.LENGTH_SHORT,
+                                gravity: ToastGravity.CENTER,
+                                timeInSecForIosWeb: 1,
+                                backgroundColor: Colors.blueAccent,
+                                textColor: Colors.black45,
+                                fontSize: 16.0
+                            );
                           } else {
-                            print('User is signed in!');
+                            Fluttertoast.showToast(
+                                msg: "Đăng nhập thành công!",
+                                toastLength: Toast.LENGTH_SHORT,
+                                gravity: ToastGravity.CENTER,
+                                timeInSecForIosWeb: 1,
+                                backgroundColor: Colors.blueAccent,
+                                textColor: Colors.black45,
+                                fontSize: 16.0
+                            );
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => registerPage()),
+                              MaterialPageRoute(builder: (context) => homeRegisterPage()),
                             );
                           }
                         });
@@ -265,7 +284,7 @@ class _loginPageState extends State<loginPage> {
                     onTap: (){
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => registerPage()),
+                        MaterialPageRoute(builder: (context) =>registerPage()),
                       );
                     },
                   ),
