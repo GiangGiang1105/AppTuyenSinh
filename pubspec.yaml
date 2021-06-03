@@ -39,6 +39,11 @@ dev_dependencies:
   cloud_firestore: ^0.16.0+1
   firebase_core:  ^0.7.0
   firebase_auth: ^0.20.1
+  flutter_svg: ^0.22.0
+  google_fonts: ^1.1.0
+  http: ^0.12.0+2
+  tiengviet: ^0.5.0
+  webview_flutter: ^2.0.8
     # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -50,6 +55,22 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/
+    - assets/images/1.png
+    - assets/images/lg.png
+    - assets/images/3.png
+    - assets/images/33.png
+    - assets/images/thongbao.png
+    - assets/images/ttdk.png
+    - assets/images/ptts.png
+    - assets/images/ttts.png
+    - assets/images/tbts.png
+    - assets/images/hanhchinh.png
+    - assets/images/hatang.png
+    - assets/images/ktx.png
+    - assets/images/nhaxuong.png
+    - assets/images/trungtamtinhoc.png
+    - assets/images/vkulap.png
     - assets/images/1.png
     - assets/images/lg.png
     - assets/images/3.png

@@ -64,7 +64,7 @@ class _xetDiemPageState extends State<xetDiemPage> {
   GioiTinh _gioitinh = GioiTinh.Nam;
 
   List<String> _dropdownItemsTinh = [
-    "Tỉnh Thành"
+    "Tỉnh Thành",
     "Đà Nẵng",
     "TP. Hồ Chí Minh",
     "Huế",
@@ -77,10 +77,12 @@ class _xetDiemPageState extends State<xetDiemPage> {
     "Trường THPT",
     "THPT Nguyễn Hoàng",
     "THPT Nguyễn Trãi ",
-    "THPT Nguyễn THị Minh Khai",
+    "THPT Nguyễn Thị 
+    Minh Khai",
     "THPT Nguyễn Huệ ",
     "THPT Quang Trung",
-    "THPT Lê Văn Hiến ",
+    "THPT Lê Văn
+     Hiến ",
   ];
   List<String> _dropdownItemsNganh = [
     "Ngành",
@@ -92,7 +94,7 @@ class _xetDiemPageState extends State<xetDiemPage> {
     "Quản trị kinh doanh",
   ];
   List<String> _dropdownItemsKhuVuc = [
-    "Khu vực"
+    "Khu vực",
     "Khu Vực 1",
     "Khu Vực 2",
     "Khu Vực 3",
@@ -580,6 +582,8 @@ class _xetDiemPageState extends State<xetDiemPage> {
                         padding: const EdgeInsets.only(top: 4, left: 10),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                             isDense: false,
+                              isExpanded: true,
                               value: _tinh,
                               items: _dropdownMenuItemsTinh,
                               onChanged: (value) {
@@ -610,6 +614,8 @@ class _xetDiemPageState extends State<xetDiemPage> {
                         padding: const EdgeInsets.only(top: 4, left: 10),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                             isDense: false,
+                              isExpanded: true,
                               value: _truong,
                               items: _dropdownMenuItemsTruong,
                               onChanged: (value) {
@@ -647,6 +653,8 @@ class _xetDiemPageState extends State<xetDiemPage> {
                         padding: const EdgeInsets.only(top: 4, left: 20),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                             isDense: false,
+                              isExpanded: true,
                               value: _khuvuc,
                               items: _dropdownMenuItemsKhuVuc,
                               onChanged: (value) {
@@ -678,6 +686,8 @@ class _xetDiemPageState extends State<xetDiemPage> {
                         padding: const EdgeInsets.only(top: 4, left: 20),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                             isDense: false,
+                              isExpanded: true,
                               value: _uutien,
                               items: _dropdownMenuItemsUuTien,
                               onChanged: (value) {
@@ -735,6 +745,8 @@ class _xetDiemPageState extends State<xetDiemPage> {
                         padding: const EdgeInsets.only(top: 4, left: 10),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                             isDense: false,
+                              isExpanded: true,
                               value: _daihoc,
                               items: _dropdownMenuItemsDaiHoc,
                               onChanged: (value) {
@@ -766,6 +778,8 @@ class _xetDiemPageState extends State<xetDiemPage> {
                         padding: const EdgeInsets.only(top: 4, left: 10),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                             isDense: false,
+                              isExpanded: true,
                               value: _nganh,
                               items: _dropdownMenuItemsNganh,
                               onChanged: (value) {
@@ -823,6 +837,8 @@ class _xetDiemPageState extends State<xetDiemPage> {
                         padding: const EdgeInsets.only(top: 4, left: 30),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                             isDense: false,
+                              isExpanded: true,
                               value: _nhommon,
                               items: _dropdownMenuItemsNhomMon,
                               onChanged: (value) {

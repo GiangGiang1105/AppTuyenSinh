@@ -69,8 +69,8 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
   GioiTinh _gioitinh = GioiTinh.Nam;
 
   List<String> _dropdownItemsTinh = [
-    "Tỉnh Thành"
-        "Đà Nẵng",
+    "Tỉnh Thành",
+    "Đà Nẵng",
     "TP. Hồ Chí Minh",
     "Huế",
     "Cà Mau",
@@ -97,8 +97,8 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
     "Quản trị kinh doanh",
   ];
   List<String> _dropdownItemsKhuVuc = [
-    "Khu vực"
-        "Khu Vực 1",
+    "Khu vực",
+    "Khu Vực 1",
     "Khu Vực 2",
     "Khu Vực 3",
     "Khu Vực 4",
@@ -110,9 +110,14 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
     "Thương binh, bệnh binh, quân nhân",
     "Con liệt sĩ, thương bệnh binh nặng",
     "Quân nhân, Công an, Thanh niên xung phong",
-
   ];
-  List<String> _dropdownItemsNhomMon = ["Chọn tổ hợp môn", "Khối A", "Khối B", "Khối C", "Khối D"];
+  List<String> _dropdownItemsNhomMon = [
+    "Chọn tổ hợp môn",
+    "Khối A",
+    "Khối B",
+    "Khối C",
+    "Khối D"
+  ];
   List<String> _dropdownItemsDaiHoc = [
     "Trường Đại học",
     "Trường Đại học CNTT & TT Việt Hàn "
@@ -426,7 +431,7 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
                         dateMask: 'yyyy/MM/dd',
                         controller: _dayofbirth,
                         validator: (val) =>
-                        val.length < 2 ? 'Hãy nhập ngày sinh' : null,
+                            val.length < 2 ? 'Hãy nhập ngày sinh' : null,
                         decoration: InputDecoration(
                           hintText: 'Ngày sinh',
                           border: InputBorder.none,
@@ -476,7 +481,7 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
                           },
                           obscureText: false,
                           controller: _phone,
-    keyboardType: TextInputType.number,
+                          keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                             hintText: 'Số điện thoại',
                             border: InputBorder.none,
@@ -599,6 +604,8 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
                         padding: const EdgeInsets.only(top: 4, left: 10),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                              isDense: false,
+                              isExpanded: true,
                               value: _tinh,
                               items: _dropdownMenuItemsTinh,
                               onChanged: (value) {
@@ -629,6 +636,8 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
                         padding: const EdgeInsets.only(top: 4, left: 10),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                              isDense: false,
+                              isExpanded: true,
                               value: _truong,
                               items: _dropdownMenuItemsTruong,
                               onChanged: (value) {
@@ -666,6 +675,8 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
                         padding: const EdgeInsets.only(top: 4, left: 20),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                              isDense: false,
+                              isExpanded: true,
                               value: _khuvuc,
                               items: _dropdownMenuItemsKhuVuc,
                               onChanged: (value) {
@@ -697,6 +708,8 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
                         padding: const EdgeInsets.only(top: 4, left: 20),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                              isDense: false,
+                              isExpanded: true,
                               value: _uutien,
                               items: _dropdownMenuItemsUuTien,
                               onChanged: (value) {
@@ -754,6 +767,8 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
                         padding: const EdgeInsets.only(top: 4, left: 10),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                              isDense: false,
+                              isExpanded: true,
                               value: _daihoc,
                               items: _dropdownMenuItemsDaiHoc,
                               onChanged: (value) {
@@ -785,6 +800,8 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
                         padding: const EdgeInsets.only(top: 4, left: 10),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                              isDense: false,
+                              isExpanded: true,
                               value: _nganh,
                               items: _dropdownMenuItemsNganh,
                               onChanged: (value) {
@@ -842,6 +859,8 @@ class _xetHocBaPageState extends State<xetHocBaPage> {
                         padding: const EdgeInsets.only(top: 4, left: 30),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
+                              isDense: false,
+                              isExpanded: true,
                               value: _nhommon,
                               items: _dropdownMenuItemsNhomMon,
                               onChanged: (value) {
